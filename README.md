@@ -1,3 +1,17 @@
+# Forward from the future
+
+This repo is a fork of the [original](https://github.com/VLOGroup/mri-variationalnetwork) and designed work with the Docker image described by the Dockerfile file found [here](https://github.com/mckib2/tensorflow-icg).
+
+To open up a bash shell with the GLOBUS data in the right place, run:
+
+```bash
+docker run -it --mount src=path/to/globus/data,target=/mri-variationalnetwork/data,type=bind tficg bash
+```
+
+Right now it runs with lots of warnings because this repo was originally based on Tensorflow r1.5.  But it runs, and that's victory enough for me.
+
+where path/to/globus/data is where you downloaded the data and tficg is the tag for the Docker image generated from the [Dockerfile](https://github.com/mckib2/tensorflow-icg/blob/master/README.md).
+
 # Variational Network for Magnetic Resonance Image (MRI) Reconstruction
 
 This repository provides a tensorflow implementation used in our publications
