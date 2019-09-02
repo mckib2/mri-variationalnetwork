@@ -8,9 +8,9 @@ To open up a bash shell with the GLOBUS data in the right place, run:
 docker run -it --mount src=path/to/globus/data,target=/mri-variationalnetwork/data,type=bind tficg bash
 ```
 
-Right now it runs with lots of warnings because this repo was originally based on Tensorflow r1.5.  But it runs, and that's victory enough for me.
-
 where path/to/globus/data is where you downloaded the data and tficg is the tag for the Docker image generated from the [Dockerfile](https://github.com/mckib2/tensorflow-icg/blob/master/README.md).
+
+I've so far only tested train_mri_vn.py.  Right now it runs with lots of warnings because this repo was originally based on Tensorflow r1.5.  But it runs, and that's victory enough for me.
 
 # Variational Network for Magnetic Resonance Image (MRI) Reconstruction
 
