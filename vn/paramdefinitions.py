@@ -17,8 +17,9 @@ def plt_act_function(x, phi):
         for i in range(phi.shape[1]):
             ax.clear()
             ax.plot(x, phi[s, i, :])
-            if fig.canvas is None:
-                FigureCanvasAgg(fig)
+            #if fig.canvas is None:
+            #    FigureCanvasAgg(fig)
+            FigureCanvasAgg(fig) # potentially a matplotlib 3.1.1 incompatibility issue, but this solves it
             fig.canvas.draw()
             img_data = np.fromstring(fig.canvas.tostring_rgb(), dtype=np.uint8, sep='')
             img_data = img_data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
